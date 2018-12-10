@@ -4,6 +4,6 @@ import com.diaspark.csvtomongo.model.CustomResultList;
 
 public interface CommaSeparatorService {
 
-	public CustomResultList findById(String orgId, int pageNum, long count);
+	public CustomResultList findById(String orgId, int pageNum, Long count);
 
 }

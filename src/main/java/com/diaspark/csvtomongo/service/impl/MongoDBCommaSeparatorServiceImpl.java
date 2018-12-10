@@ -25,10 +25,10 @@ public class MongoDBCommaSeparatorServiceImpl implements CommaSeparatorService{
     }
 	
 	@Override
-	public CustomResultList findById(String id, int pageNum, long count) {
+	public CustomResultList findById(String id, int pageNum, Long count) {
 		CustomResultList customResultList = new CustomResultList();
 		int newPageNum = pageNum + 1;
-		int _id = Integer.parseInt(CriptoUtil.decrypt(id));
+		String _id = CriptoUtil.encrypt(id);
 		Query query = new Query();
 		// Get only 100 records based on orgId
 		int greaterThan = (pageNum*100);

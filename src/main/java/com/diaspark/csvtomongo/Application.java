@@ -40,10 +40,11 @@ public class Application implements ApplicationListener<ApplicationReadyEvent> {
 		Criteria criteria = new Criteria();
 		query.addCriteria(criteria);
 		query.fields().include("orgId");
-		List<Integer> list = mongoTemplate.getCollection("domain").distinct("orgId");
+		List<String> list = mongoTemplate.getCollection("domain").distinct("orgId");
 		List<String> list2 = new ArrayList<String>();
-		for (Integer integer : list) {
-			list2.add(CriptoUtil.encrypt(integer.toString()));
+		for (String string : list) {
+			//list2.add(CriptoUtil.encrypt(integer.toString()));
+			list2.add(CriptoUtil.decrypt(string));
 		}
 		System.out.println("List of orgId :::: " + list2);
 	}

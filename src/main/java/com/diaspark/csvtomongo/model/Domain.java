@@ -11,7 +11,7 @@ public class Domain implements Serializable {
 	
 	private int sequence;
 	private int id;
-	private int orgId;
+	private String orgId;
 	private String name;
 
 	public int getSequence() {
@@ -30,11 +30,11 @@ public class Domain implements Serializable {
 		this.id = id;
 	}
 
-	public int getOrgId() {
+	public String getOrgId() {
 		return orgId;
 	}
 
-	public void setOrgId(int orgId) {
+	public void setOrgId(String orgId) {
 		this.orgId = orgId;
 	}
 

@@ -48,7 +48,7 @@ public class BatchController {
 	}
 
 	@RequestMapping(value = "{orgId}", method = RequestMethod.GET)
-	public @ResponseBody CustomResultList findById(@PathVariable("orgId") String orgId, @RequestParam int pageNum, @RequestParam(required=false) Long count) {
+	public @ResponseBody CustomResultList findById(@PathVariable("orgId") String orgId, @RequestParam(required=false) int pageNum, @RequestParam(required=false) Long count) {
 		if(count == null) {
 			count = 0l;
 		}
